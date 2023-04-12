@@ -12,7 +12,7 @@
     "prettier:check": "npx prettier --check .",
     "build:dev": "webpack-dev-server --open --node-env development",
     "build:prod": "webpack --node-env production",
-    "heroku-postbuild": "npm run build:prod && npm run start"
+    "heroku-postbuild": "npm run lint:fix && npm run prettier:fix && npm run build:prod"
   },
   "keywords": [
     "html",
